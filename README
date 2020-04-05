@@ -5,6 +5,16 @@ The squish library is distributed under the terms and conditions of the MIT
 license. This license is specified at the top of each source file and must be
 preserved in its entirety.
 
+FIXED TABLES 
+------------
+
+This fork of the original library contains fixed solid color tables for 3 and
+4 color blocks. The original tables did not factor in the up to 3% error allowed
+by actual GPU BC1 decoding hardware, leading to noticeable artifacts on some textures.
+More information is [here](http://www.ludicon.com/castano/blog/2009/03/gpu-dxt-decompression/).
+
+To use the original tables, set SQUISH_USE_ORIGINAL_TABLES to 1 in singlecolourfit.cpp.
+
 BUILDING AND INSTALLING THE LIBRARY
 -----------------------------------
 
