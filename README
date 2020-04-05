@@ -16,6 +16,26 @@ http://www.ludicon.com/castano/blog/2009/03/gpu-dxt-decompression/
 
 To use the original tables, set SQUISH_USE_ORIGINAL_TABLES to 1 in singlecolourfit.cpp.
 
+Average across 101 test textures:
+
+Original/bad tables:
+Ideal BC1 PSNR: 36.504513 dB, std dev: 7.569236
+NVidia BC1 PSNR: 36.391151 dB, std dev: 7.389989
+
+Fixed (this fork):
+Ideal BC1 PSNR: 36.498199 dB, std dev: 7.555960
+NVidia BC1 PSNR: 36.462097 dB, std dev: 7.475064
+
+This is across 101 textures. Some textures are impacted more than others. One example (a grayscale texture):
+
+Original:
+Ideal BC1 PSNR: 46.656 dB
+NVidia BC1 PSNR: 43.203 dB
+
+Fixed:
+Ideal BC1 PSNR: 46.625 dB
+NVidia BC1 PSNR: 45.410 dB
+
 BUILDING AND INSTALLING THE LIBRARY
 -----------------------------------
 
