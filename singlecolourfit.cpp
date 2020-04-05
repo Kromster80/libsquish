@@ -41,6 +41,8 @@ struct SingleColourLookup
 	SourceBlock sources[2];
 };
 
+#define SQUISH_USE_ORIGINAL_TABLES 0
+
 #include "singlecolourlookup.inl"
 
 static int FloatToInt( float a, int limit )
