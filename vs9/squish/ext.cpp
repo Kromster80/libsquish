@@ -16,8 +16,7 @@ extern "C"
 		control_word_x87 = _control87(0, 0);
 		control_word_x87 = _control87(DEFAULT_CW, MCW_EM);
 
-		//	Compress( rgba, block, flags, metric );
-		Compress(rgba, block, flags, 0);
+		Compress( rgba, block, flags, metric );
 	}	
 
 /* EXE variant
